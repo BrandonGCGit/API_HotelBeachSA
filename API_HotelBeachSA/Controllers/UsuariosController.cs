@@ -45,6 +45,18 @@ namespace API_HotelBeachSA.Controllers
         }//Consultar
 
         /// <summary>
+        /// Método para Consultar por cédula
+        /// </summary>
+        /// <param name="Email"></param>
+        /// <returns></returns>
+        [HttpGet("ConsultarPorEmail")]
+        public async Task<Usuario> ConsultarPorEmail(string email)
+        {
+            var temp = await _context.Usuario.FirstOrDefaultAsync(u => u.Email == email);
+            return temp;
+        }//Consultar
+
+        /// <summary>
         /// Método para agregar un Usuario
         /// </summary>
         /// <param name="usuario"></param>

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 namespace API_HotelBeachSA.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class DescuentosController : Controller
     {
         private readonly DBContextGestionHotel _context;

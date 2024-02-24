@@ -22,7 +22,7 @@ namespace API_HotelBeachSA.Controllers
             _context = context;
         }
 
-        [Authorize]
+        //[Authorize]
         // GET: api/Clientes
         [HttpGet("Listado")]
         public async Task<ActionResult<IEnumerable<Cliente>>> GetCliente()

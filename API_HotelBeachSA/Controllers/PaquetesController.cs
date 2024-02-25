@@ -29,7 +29,7 @@ namespace API_HotelBeachSA.Controllers
         }
 
         // GET: api/Paquetes/5
-        [HttpGet("Constultar")]
+        [HttpGet("Consultar")]
         public async Task<ActionResult<Paquete>> GetPaquete(int id)
         {
             var paquete = await _context.Paquete.FindAsync(id);

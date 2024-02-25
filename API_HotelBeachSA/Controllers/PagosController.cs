@@ -31,7 +31,7 @@ namespace API_HotelBeachSA.Controllers
         }
 
         [HttpPost("Agregar")]
-        public string Agregar(Pago pago)
+        public async Task<ActionResult<Reservacion>> Agregar(Pago pago)
         {
             string mensaje = "";
             try
@@ -45,7 +45,7 @@ namespace API_HotelBeachSA.Controllers
                 mensaje = "Error " + ex.Message + " " + ex.InnerException.ToString();
             }
 
-            return mensaje; //se retorna mensaje
+            return CreatedAtAction("GetPago", new { id = pago.Id }, pago);
         }
 
         [HttpPut("Modificar")]
